@@ -22,3 +22,32 @@ a{color:inherit;text-decoration:none}.nav{position:sticky;top:0;z-index:20;heigh
 footer{border-top:1px solid #191d24;padding:35px 7vw;color:#697383;font-size:12px;display:flex;justify-content:space-between}
 .wa{position:fixed;right:24px;bottom:24px;z-index:30;background:#20c76b;color:#fff;padding:14px 18px;border-radius:999px;font-weight:800;box-shadow:0 12px 35px #0008}
 @media(max-width:850px){.menu{display:none}.hero{grid-template-columns:1fr;padding-top:65px}.grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.hero h1{letter-spacing:-4px}.banner{flex-direction:column;align-items:flex-start}.nav{padding:0 5vw}}
+
+/* --- FUTURE MOTION SYSTEM --- */
+.motion-stage{position:relative;height:560px;display:grid;place-items:center;perspective:900px}
+.ai-orb{width:290px;height:290px;border-radius:47% 53% 62% 38% / 45% 40% 60% 55%;position:relative;
+ background:radial-gradient(circle at 34% 28%,#ffffff 0 2%,#cda9ff 4%,#7c2cff 19%,#2a0d65 43%,#080a12 72%);
+ box-shadow:0 0 30px #9d35ff99,0 0 100px #7d2cff55, inset -30px -25px 60px #000b;
+ animation:morph 7s ease-in-out infinite, float 5s ease-in-out infinite}
+.ai-orb:before,.ai-orb:after{content:"";position:absolute;inset:-35px;border:1px solid #9b43ff55;border-radius:50%;
+ animation:spin 13s linear infinite}
+.ai-orb:after{inset:-75px;border-color:#4d7dff44;animation:spinReverse 18s linear infinite}
+.orbit{position:absolute;width:410px;height:150px;border:1px solid #a8ff2440;border-radius:50%;transform:rotate(-25deg);animation:orbit 8s linear infinite}
+.orbit.two{width:500px;height:210px;border-color:#6d58ff3d;transform:rotate(38deg);animation-duration:11s}
+.scan{position:absolute;width:420px;height:2px;background:linear-gradient(90deg,transparent,#a8ff24,transparent);filter:blur(.4px);animation:scan 3.8s ease-in-out infinite}
+.particle{position:absolute;width:5px;height:5px;border-radius:50%;background:#a8ff24;box-shadow:0 0 18px #a8ff24;animation:particle 5s ease-in-out infinite}
+.p1{top:16%;left:20%}.p2{top:72%;left:78%;animation-delay:1s}.p3{top:28%;left:82%;animation-delay:2s}.p4{top:80%;left:25%;animation-delay:3s}
+@keyframes morph{0%,100%{border-radius:47% 53% 62% 38% / 45% 40% 60% 55%;transform:rotate(-8deg) scale(1)}
+50%{border-radius:62% 38% 42% 58% / 55% 62% 38% 45%;transform:rotate(8deg) scale(1.08)}}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -18px}}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes spinReverse{to{transform:rotate(-360deg)}}
+@keyframes orbit{to{transform:rotate(335deg)}}@keyframes scan{0%,100%{transform:translateY(-150px);opacity:0}30%,70%{opacity:1}50%{transform:translateY(150px)}}
+@keyframes particle{0%,100%{transform:translate(0,0);opacity:.35}50%{transform:translate(20px,-35px);opacity:1}}
+.hero .motion-stage{order:2}
+.hero .hero-copy{order:1}
+.terms-modal{position:fixed;inset:0;background:#000b;backdrop-filter:blur(12px);display:none;place-items:center;z-index:100;padding:20px}
+.terms-modal.open{display:grid}.terms-box{max-width:560px;width:100%;background:#0a0d12;border:1px solid #303846;border-radius:18px;padding:30px;box-shadow:0 30px 100px #000}
+.terms-box h3{font-size:25px;margin:0 0 12px}.terms-box p{color:#9ba5b5;line-height:1.65}
+.terms-check{display:flex;gap:10px;align-items:flex-start;color:#c7ced9;font-size:13px;margin:22px 0}.terms-check input{accent-color:#a728ff;margin-top:3px}
+.terms-actions{display:flex;gap:10px}.terms-actions button{cursor:pointer;border:0}.cancel-btn{padding:14px 18px;border-radius:10px;background:#171b22;color:#cbd1db}
+@media(max-width:850px){.motion-stage{height:360px}.ai-orb{width:210px;height:210px}.orbit{width:300px}.orbit.two{width:360px}}
