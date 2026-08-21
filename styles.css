@@ -51,3 +51,54 @@ footer{border-top:1px solid #191d24;padding:35px 7vw;color:#697383;font-size:12p
 .terms-check{display:flex;gap:10px;align-items:flex-start;color:#c7ced9;font-size:13px;margin:22px 0}.terms-check input{accent-color:#a728ff;margin-top:3px}
 .terms-actions{display:flex;gap:10px}.terms-actions button{cursor:pointer;border:0}.cancel-btn{padding:14px 18px;border-radius:10px;background:#171b22;color:#cbd1db}
 @media(max-width:850px){.motion-stage{height:360px}.ai-orb{width:210px;height:210px}.orbit{width:300px}.orbit.two{width:360px}}
+
+/* --- SPECTACULAR CORE: orbiting labels, radar pings, HUD ring --- */
+.ai-orb{animation:morph 7s ease-in-out infinite, float 5s ease-in-out infinite, pulseGlow 4.2s ease-in-out infinite}
+@keyframes pulseGlow{
+  0%,100%{box-shadow:0 0 30px #9d35ff99,0 0 100px #7d2cff55, inset -30px -25px 60px #000b}
+  50%{box-shadow:0 0 58px #c37bffcc,0 0 160px #7d2cff80, inset -30px -25px 60px #000b}
+}
+
+.motion-stage{isolation:isolate}
+.motion-stage::before{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  border:1px dashed #ffffff17;animation:spin 42s linear infinite;pointer-events:none
+}
+.motion-stage::after{
+  content:"";position:absolute;width:640px;height:640px;border-radius:50%;
+  background:radial-gradient(circle,#6b27ff14 0%,transparent 70%);pointer-events:none;z-index:-1
+}
+
+.label-ring{position:absolute;inset:0;animation:spin 26s linear infinite;pointer-events:none;z-index:5}
+.orbit-slot{position:absolute;top:50%;left:50%;width:0;height:0}
+.orbit-pill{
+  position:absolute;
+  animation:pillCounterSpin 26s linear infinite;
+  border:1px solid #ffffff26;background:#0b0e13e0;backdrop-filter:blur(8px);
+  padding:9px 15px;border-radius:999px;font-size:10.5px;font-weight:800;letter-spacing:1.6px;
+  color:#eef1f7;white-space:nowrap;box-shadow:0 0 24px #00000070, 0 0 0 1px #ffffff0c inset
+}
+@keyframes pillCounterSpin{
+  from{transform:translate(-50%,-50%) rotate(0deg)}
+  to{transform:translate(-50%,-50%) rotate(-360deg)}
+}
+.orbit-pill.alt{border-color:#a728ff66;color:#e9d8ff}
+.orbit-pill.alt2{border-color:#4d7dff66;color:#d6e0ff}
+
+.ping-ring{
+  position:absolute;top:50%;left:50%;width:290px;height:290px;margin:-145px 0 0 -145px;
+  border-radius:50%;border:1px solid #a728ff4d;animation:ping 3.6s ease-out infinite;pointer-events:none;z-index:2
+}
+@keyframes ping{0%{transform:scale(.55);opacity:.6}100%{transform:scale(2.05);opacity:0}}
+
+@media(max-width:600px){
+  .motion-stage::before{width:340px;height:340px}
+  .motion-stage::after{width:420px;height:420px}
+  .label-ring{display:none}
+  .ping-ring{width:210px;height:210px;margin:-105px 0 0 -105px}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .ai-orb,.ai-orb:before,.ai-orb:after,.orbit,.orbit.two,.scan,.particle,
+  .label-ring,.orbit-pill,.ping-ring,.motion-stage::before{animation:none}
+}
