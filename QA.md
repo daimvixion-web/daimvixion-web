@@ -1,11 +1,11 @@
-# DAiMViXiOn V6 — revisión visual
+# QA V8
 
-- Se eliminó la mezcla de estilos que producía círculos, polígonos y SVG gigantes negros.
-- La portada ahora tiene estructura propia y coherente.
-- Las cuatro áreas principales tienen tarjetas visuales distintas.
-- Se incorporaron las imágenes proporcionadas para los casos visuales.
-- Se eliminó texto en inglés innecesario.
-- Se corrigieron secciones que se salían por el borde.
-- Se eliminó la duplicación del modal de WhatsApp.
-- Se mantuvo el lenguaje visual oscuro, técnico y premium.
-- Se conservó la lógica de WhatsApp con confirmación.
+- [x] Inicio conservado.
+- [x] IA Real con secuencia cámara → bounding box → detección → tracking → clasificación.
+- [x] Cursos con ruta visual, módulos, progreso y proyecto.
+- [x] Investigación con matriz experimental, modelos, métricas y resultado.
+- [x] Deportes con campo táctico, jugadores, tracking, datos y highlights.
+- [x] Paleta independiente por página con proporción visual 70/20/10.
+- [x] Texto fuera de zonas de movimiento/imagen para evitar superposición accidental.
+- [x] Responsive para tablet y móvil.
+- [x] CTA de WhatsApp conservado mediante `script.js`.
