@@ -1,4 +1,5 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IA Real · DAiMViXiOn</title><link rel="stylesheet" href="styles.css"></head><body>
+<script>function handleImgError(img){img.onerror=null;var shot=img.closest('.shot');if(!shot)return;shot.innerHTML='<span class="live-tag"><span class="dot-live"></span>SISTEMA REAL</span><div class="abstract-viz"><div class="viz-grid"></div><div class="viz-scan"></div><div class="viz-core"></div></div><div class="img-missing-note">Falta subir la imagen: <code>'+img.getAttribute('src')+'</code></div>';}</script>
 <header class="nav">
   <a href="index.html"><div class="logo">DAiMViXi<span>On</span><i>.</i><small class="tag">IA · VISIÓN · DATA · FUTURO</small></div></a>
   <nav class="menu">
@@ -21,17 +22,17 @@
 <div class="showcase-grid">
 
 <div class="showcase-card">
-  <div class="shot"><span class="live-tag"><span class="dot-live"></span>SISTEMA REAL</span><img src="proyectos/conteo-paltas.jpg" alt="Conteo automático de paltas con visión por computador"></div>
+  <div class="shot"><span class="live-tag"><span class="dot-live"></span>SISTEMA REAL</span><img src="proyectos/conteo-paltas.jpg" alt="Conteo automático de paltas con visión por computador" onerror="handleImgError(this)"></div>
   <div class="caption"><small>AGRICULTURA</small><h3>Conteo de paltas</h3><p>Visión artificial para identificar y contabilizar frutos en campo, en tiempo real.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="shot"><span class="live-tag"><span class="dot-live"></span>SISTEMA REAL</span><img src="proyectos/diagnostico-cultivo.jpg" alt="Diagnóstico de enfermedades en cultivos"></div>
+  <div class="shot"><span class="live-tag"><span class="dot-live"></span>SISTEMA REAL</span><img src="proyectos/diagnostico-cultivo.jpg" alt="Diagnóstico de enfermedades en cultivos" onerror="handleImgError(this)"></div>
   <div class="caption"><small>PLANTAS</small><h3>Enfermedades en cultivos</h3><p>Clasificación y detección de enfermedades foliares a partir de imágenes.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="shot"><span class="live-tag"><span class="dot-live"></span>SISTEMA REAL</span><img src="proyectos/pose-deteccion.jpg" alt="Detección de pose y análisis de movimiento"></div>
+  <div class="shot"><span class="live-tag"><span class="dot-live"></span>SISTEMA REAL</span><img src="proyectos/pose-deteccion.jpg" alt="Detección de pose y análisis de movimiento" onerror="handleImgError(this)"></div>
   <div class="caption"><small>PERSONAS</small><h3>Pose Detection</h3><p>Análisis de postura y movimiento, incluyendo escenarios de seguridad ocupacional.</p></div>
 </div>
 

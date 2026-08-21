@@ -41,24 +41,26 @@ function buildMotionStage(stage){
     stage.appendChild(ping);
   }
 
-  // cardinal AI-core nodes
-  CORE_NODES.forEach(n => {
-    const node = document.createElement("div");
-    node.className = "ai-core-node " + n.pos + " " + n.cls;
-    node.innerHTML = `
-      <span class="node-dot"></span><span class="node-label">${n.label}</span>
-      <div class="node-line"></div>
-      <div class="node-panel">
-        <div class="panel-kicker">${n.kicker}</div>
-        <ul>${n.items.map(i => `<li>${i}</li>`).join("")}</ul>
-      </div>`;
-    node.addEventListener("click", () => {
-      const wasActive = node.classList.contains("active");
-      stage.querySelectorAll(".ai-core-node.active").forEach(a => a.classList.remove("active"));
-      if (!wasActive) node.classList.add("active");
+  // cardinal AI-core nodes (skipped on simplified stages, e.g. Cursos/Investigación)
+  if (stage.dataset.simple !== "1"){
+    CORE_NODES.forEach(n => {
+      const node = document.createElement("div");
+      node.className = "ai-core-node " + n.pos + " " + n.cls;
+      node.innerHTML = `
+        <span class="node-dot"></span><span class="node-label">${n.label}</span>
+        <div class="node-line"></div>
+        <div class="node-panel">
+          <div class="panel-kicker">${n.kicker}</div>
+          <ul>${n.items.map(i => `<li>${i}</li>`).join("")}</ul>
+        </div>`;
+      node.addEventListener("click", () => {
+        const wasActive = node.classList.contains("active");
+        stage.querySelectorAll(".ai-core-node.active").forEach(a => a.classList.remove("active"));
+        if (!wasActive) node.classList.add("active");
+      });
+      stage.appendChild(node);
     });
-    stage.appendChild(node);
-  });
+  }
 
   // cursor-follow sparks (throttled)
   let lastSpark = 0;
@@ -135,6 +137,7 @@ document.querySelectorAll("[data-count-to]").forEach(el => {
 /* --- IA CORE: floating processing words --- */
 const PROCESS_WORDS = ["VISIÓN","DETECCIÓN","SEGUIMIENTO","CLASIFICACIÓN","LLM","DATA"];
 function startFloatWords(stage){
+  const wordList = stage.dataset.words ? stage.dataset.words.split(",") : PROCESS_WORDS;
   const spots = [
     {top:"8%",left:"6%"},{top:"14%",right:"4%"},{top:"48%",left:"2%"},
     {top:"48%",right:"2%"},{top:"85%",left:"10%"},{top:"85%",right:"8%"}
@@ -146,7 +149,7 @@ function startFloatWords(stage){
     word.className = "float-word";
     const spot = spots[i % spots.length];
     Object.assign(word.style, spot);
-    word.textContent = PROCESS_WORDS[i % PROCESS_WORDS.length];
+    word.textContent = wordList[i % wordList.length];
     stage.appendChild(word);
     requestAnimationFrame(() => word.classList.add("show"));
     setTimeout(() => word.classList.remove("show"), 1900);
