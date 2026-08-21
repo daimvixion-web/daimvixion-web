@@ -1,0 +1,17 @@
+{
+  "title": "IA Generativa y LLMs",
+  "published": true,
+  "featured": false,
+  "summary": "Conceptos y aplicaciones de modelos de lenguaje.",
+  "description": "Uso responsable y práctico de LLMs, asistentes y automatización.",
+  "duration": "Por definir",
+  "modality": "Presencial / online",
+  "audience": "Profesionales, docentes y estudiantes",
+  "topics": [
+    "LLMs",
+    "RAG",
+    "Prompts",
+    "APIs",
+    "Automatización"
+  ]
+}

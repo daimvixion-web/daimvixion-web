@@ -1,0 +1,13 @@
+{
+  "title": "Machine Learning",
+  "published": true,
+  "featured": false,
+  "category": "Machine Learning",
+  "summary": "Modelos predictivos y clasificación para apoyar decisiones.",
+  "description": "Modelos predictivos y clasificación para apoyar decisiones.",
+  "technologies": [
+    "Machine Learning",
+    "Data Analytics",
+    "Python"
+  ]
+}

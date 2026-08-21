@@ -1,0 +1,17 @@
+{
+  "title": "Machine Learning",
+  "published": true,
+  "featured": false,
+  "summary": "De los fundamentos a proyectos aplicados con datos reales.",
+  "description": "Preparación de datos, modelos supervisados y evaluación.",
+  "duration": "Por definir",
+  "modality": "Presencial / online",
+  "audience": "Profesionales, docentes y estudiantes",
+  "topics": [
+    "Datos",
+    "Clasificación",
+    "Regresión",
+    "Evaluación",
+    "Proyectos"
+  ]
+}

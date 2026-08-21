@@ -1,0 +1,17 @@
+{
+  "title": "Computer Vision",
+  "published": true,
+  "featured": false,
+  "summary": "Análisis inteligente de imágenes y video.",
+  "description": "Fundamentos y aplicaciones de visión computacional.",
+  "duration": "Por definir",
+  "modality": "Presencial / online",
+  "audience": "Profesionales, docentes y estudiantes",
+  "topics": [
+    "Imágenes",
+    "Detección",
+    "Clasificación",
+    "Video",
+    "Deep Learning"
+  ]
+}

@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: daimvixion-web/daimvixion-web
+  branch: main
+  auth_methods:
+    - token
+
+media_folder: /assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: courses
+    label: Cursos
+    label_singular: Curso
+    folder: /content/cursos
+    format: json
+    create: true
+    fields:
+      - { label: Nombre, name: title, widget: string }
+      - { label: Publicado, name: published, widget: boolean, default: true }
+      - { label: Destacado, name: featured, widget: boolean, default: false }
+      - { label: Resumen, name: summary, widget: text }
+      - { label: Descripción, name: description, widget: text }
+      - { label: Duración, name: duration, widget: string }
+      - { label: Modalidad, name: modality, widget: string }
+      - { label: Público, name: audience, widget: string }
+      - { label: Temas, name: topics, widget: list }
+
+  - name: projects
+    label: Proyectos
+    label_singular: Proyecto
+    folder: /content/proyectos
+    format: json
+    create: true
+    fields:
+      - { label: Nombre, name: title, widget: string }
+      - { label: Publicado, name: published, widget: boolean, default: true }
+      - { label: Destacado, name: featured, widget: boolean, default: false }
+      - { label: Categoría, name: category, widget: string }
+      - { label: Resumen, name: summary, widget: text }
+      - { label: Descripción, name: description, widget: text }
+      - { label: Tecnologías, name: technologies, widget: list }
+
+  - name: media
+    label: Media y eventos
+    label_singular: Evento / servicio
+    folder: /content/media
+    format: json
+    create: true
+    fields:
+      - { label: Nombre, name: title, widget: string }
+      - { label: Publicado, name: published, widget: boolean, default: true }
+      - { label: Destacado, name: featured, widget: boolean, default: false }
+      - { label: Resumen, name: summary, widget: text }
+      - { label: Descripción, name: description, widget: text }
+      - { label: Servicios, name: services, widget: list }
+
+  - name: news
+    label: Noticias
+    label_singular: Noticia
+    folder: /content/noticias
+    format: json
+    create: true
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Publicado, name: published, widget: boolean, default: false }
+      - { label: Fecha, name: date, widget: datetime, type: date }
+      - { label: Resumen, name: summary, widget: text }
+      - { label: Contenido, name: body, widget: richtext }
+
+  - name: site
+    label: Configuración del sitio
+    files:
+      - name: settings
+        label: Contacto y redes
+        file: /content/site/settings.json
+        format: json
+        fields:
+          - { label: Marca, name: brand, widget: string }
+          - { label: Razón social, name: legal_name, widget: string }
+          - { label: Contacto, name: contact_name, widget: string }
+          - { label: WhatsApp, name: whatsapp, widget: string }
+          - { label: Teléfono visible, name: phone_display, widget: string }
+          - { label: Ubicación, name: location, widget: string }
+          - { label: Correo principal, name: email, widget: string }
+          - { label: Correo de servicios, name: services_email, widget: string }
+          - { label: Instagram, name: instagram, widget: string }
+          - { label: Facebook, name: facebook, widget: string }
+          - { label: LinkedIn, name: linkedin, widget: string }
+          - { label: YouTube, name: youtube, widget: string }

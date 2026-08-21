@@ -1,0 +1,13 @@
+{
+  "title": "Video Analytics",
+  "published": true,
+  "featured": false,
+  "category": "Video Analytics",
+  "summary": "Análisis automático de video para aplicaciones deportivas y empresariales.",
+  "description": "Análisis automático de video para aplicaciones deportivas y empresariales.",
+  "technologies": [
+    "Computer Vision",
+    "Video",
+    "Deep Learning"
+  ]
+}

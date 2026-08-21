@@ -1,0 +1,14 @@
+{
+  "title": "IA Generativa y LLMs",
+  "published": true,
+  "featured": false,
+  "category": "IA Generativa",
+  "summary": "Asistentes, búsqueda semántica y automatización documental.",
+  "description": "Asistentes, búsqueda semántica y automatización documental.",
+  "technologies": [
+    "LLMs",
+    "RAG",
+    "APIs",
+    "Python"
+  ]
+}

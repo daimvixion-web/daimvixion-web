@@ -1,0 +1,13 @@
+{
+  "title": "Computer Vision aplicado",
+  "published": true,
+  "featured": true,
+  "category": "Computer Vision",
+  "summary": "Detección, clasificación, seguimiento y análisis de imágenes o video.",
+  "description": "Detección, clasificación, seguimiento y análisis de imágenes o video.",
+  "technologies": [
+    "Deep Learning",
+    "Computer Vision",
+    "Python"
+  ]
+}

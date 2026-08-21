@@ -1,0 +1,17 @@
+{
+  "title": "Deep Learning",
+  "published": true,
+  "featured": true,
+  "summary": "Curso práctico para comprender y desarrollar modelos de Deep Learning.",
+  "description": "Fundamentos de redes neuronales, entrenamiento de modelos y aplicaciones prácticas.",
+  "duration": "Por definir",
+  "modality": "Presencial / online",
+  "audience": "Profesionales, docentes y estudiantes",
+  "topics": [
+    "Redes neuronales",
+    "Entrenamiento",
+    "CNN",
+    "Transfer Learning",
+    "Proyectos prácticos"
+  ]
+}

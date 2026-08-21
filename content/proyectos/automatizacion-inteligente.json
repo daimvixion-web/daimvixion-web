@@ -1,0 +1,13 @@
+{
+  "title": "Automatización inteligente",
+  "published": true,
+  "featured": false,
+  "category": "Automatización",
+  "summary": "Automatización de procesos mediante software e IA.",
+  "description": "Automatización de procesos mediante software e IA.",
+  "technologies": [
+    "Python",
+    "APIs",
+    "IA"
+  ]
+}
