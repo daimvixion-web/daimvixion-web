@@ -1,3 +1,5 @@
+// DAiMViXiOn analytics hook: connect GA4/Cloudflare Web Analytics when the measurement ID is available.
+function trackEvent(name, data={}){ if(window.gtag){ window.gtag('event',name,data); } }
 
 const WA="51991429347";
 let pendingMessage="";
@@ -13,7 +15,7 @@ function acceptTerms(){
   closeTerms();
 }
 document.querySelectorAll("[data-wa]").forEach(b=>{
-  b.addEventListener("click",e=>{e.preventDefault();openWhatsApp(b.dataset.wa)})
+  b.addEventListener("click",e=>{e.preventDefault();trackEvent("whatsapp_cta_click",{message_context:b.dataset.wa.slice(0,70)});openWhatsApp(b.dataset.wa)})
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeTerms()});
 
@@ -277,7 +279,6 @@ document.querySelectorAll(".case-visual").forEach(v=>{
  const body={};
  if(k==="avocado") body.html=`<div class="cv-pallet"></div>${[[22,25],[48,32],[69,23],[34,58],[62,64]].map((p,i)=>`<i class="cv-fruit" style="left:${p[0]}%;top:${p[1]}%;animation-delay:${i*.35}s"></i>`).join("")}`;
  if(k==="plant") body.html=`<div class="cv-leaf"></div><i class="cv-lesion" style="left:55%;top:34%"></i><i class="cv-lesion" style="left:66%;top:58%;animation-delay:.7s"></i><i class="cv-lesion" style="left:39%;top:67%;animation-delay:1.2s"></i>`;
- if(k==="health") body.html=`<div class="cv-scanframe"></div><div class="cv-retina"></div><i class="cv-lesion" style="left:46%;top:39%"></i><i class="cv-lesion" style="left:60%;top:55%;animation-delay:.8s"></i><div class="cv-diagnosis">ANÁLISIS · 96%</div>`;
  if(k==="pose") body.html=`<div class="cv-skeleton"></div>${[[42,18],[49,30],[57,40],[39,48],[63,50],[47,67],[67,78]].map((p,i)=>`<i class="cv-joint" style="left:${p[0]}%;top:${p[1]}%;animation-delay:${i*.18}s"></i>`).join("")}`;
  if(k==="industry") body.html=`<div class="cv-factory"></div><i class="cv-part" style="left:22%;top:43%"></i><i class="cv-part" style="left:55%;top:52%;animation-delay:1.3s"></i><i class="cv-part" style="left:70%;top:30%;animation-delay:2.2s"></i>`;
  if(k==="cattle") body.html=`<div class="cv-cattle"></div><i class="cv-cow" style="left:20%;top:48%"></i><i class="cv-cow" style="left:54%;top:34%;transform:scale(.8);animation-delay:1.2s"></i>`;
