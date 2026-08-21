@@ -1,26 +1,11 @@
+
 const WA="51991429347";
 let pendingMessage="";
-function openWhatsApp(message){
-  pendingMessage=message||"Hola, DAiMViXiOn. Quiero información.";
-  const modal=document.getElementById("termsModal");
-  const check=document.getElementById("termsAccept");
-  if(check) check.checked=false;
-  if(modal) modal.classList.add("open");
-}
-function closeTerms(){document.getElementById("termsModal")?.classList.remove("open");}
-function acceptTerms(){
-  const c=document.getElementById("termsAccept");
-  if(!c?.checked){alert("Debes aceptar los términos para continuar.");return;}
-  const url="https://web.whatsapp.com/send?phone="+WA+"&text="+encodeURIComponent(pendingMessage);
-  closeTerms();
-  window.location.href=url;
-}
-document.addEventListener("click",e=>{
-  const trigger=e.target.closest("[data-wa]");
-  if(trigger){e.preventDefault();openWhatsApp(trigger.dataset.wa);return;}
-  if(e.target.id==="termsModal") closeTerms();
-});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeTerms();});
+function openWhatsApp(message){pendingMessage=message;document.getElementById("termsModal")?.classList.add("open")}
+function closeTerms(){document.getElementById("termsModal")?.classList.remove("open")}
+function acceptTerms(){const c=document.getElementById("termsAccept");if(!c?.checked){alert("Debes aceptar los términos para continuar.");return}window.location.href="https://wa.me/"+WA+"?text="+encodeURIComponent(pendingMessage)}
+document.querySelectorAll("[data-wa]").forEach(x=>x.addEventListener("click",e=>{e.preventDefault();openWhatsApp(x.dataset.wa)}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeTerms()});
 
 /* ============================================================
    PROYECTOS (ia-real.html): visual propio por categoría
@@ -115,8 +100,7 @@ function revealOnScroll(selector, itemSelector, stagger){
     io.observe(container);
   });
 }
-revealOnScroll(".flow", ".step", 140);
-revealOnScroll(".research-flow", ".rf-node", 160);
+revealOnScroll(".process-track .track-grid", ".track-cell, .track-dot", 130);
 document.querySelectorAll(".experiment-panel").forEach(panel => {
   const rows = panel.querySelectorAll(".model-row");
   const io = new IntersectionObserver((entries) => {
