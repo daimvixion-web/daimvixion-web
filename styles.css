@@ -170,6 +170,11 @@ footer{border-top:1px solid #191d24;padding:35px 7vw;color:#697383;font-size:12p
 /* --- Cursos audience selector --- */
 .audience-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0}
 .audience-tab{border:1px solid var(--line);background:transparent;color:#b5bdc9;padding:12px 20px;border-radius:999px;font-size:12.5px;letter-spacing:1px;cursor:pointer;font-family:inherit;transition:border-color .2s ease,color .2s ease,background .2s ease}
+.tab-ic{display:inline-block;font-size:9px;margin-right:6px;color:var(--lime);animation:tabPulse 1.8s ease-in-out infinite}
+.audience-tab:nth-child(2) .tab-ic{color:var(--blue);animation-delay:.2s}
+.audience-tab:nth-child(3) .tab-ic{color:var(--purple);animation-delay:.4s}
+.audience-tab:nth-child(4) .tab-ic{color:#ff5f7a;animation-delay:.6s}
+@keyframes tabPulse{0%,100%{opacity:.4;transform:scale(.85)}50%{opacity:1;transform:scale(1.15)}}
 .audience-tab:hover{color:#fff;border-color:#3d4658}
 .audience-tab.active{background:linear-gradient(110deg,var(--purple),var(--blue));color:#fff;border-color:transparent}
 .audience-panel{display:none}
@@ -206,3 +211,29 @@ footer{border-top:1px solid #191d24;padding:35px 7vw;color:#697383;font-size:12p
   .ai-orb,.ai-orb:before,.ai-orb:after,.orbit,.orbit.two,.scan,.particle,.ping-ring,.motion-stage::before,
   .viz-scan,.viz-grid,.pdot,.viz-core:before{animation:none}
 }
+
+/* --- small animated icons per proposal card --- */
+.card{position:relative}
+.card-icon{position:absolute;top:22px;right:24px;width:38px;height:38px;opacity:.85}
+.card-icon svg{width:100%;height:100%;overflow:visible}
+.card-icon svg *{fill:none;stroke:var(--lime);stroke-width:1.4;stroke-linecap:round}
+
+.ci-ring{animation:spin 7s linear infinite;transform-origin:center}
+.ci-dot{fill:var(--lime);stroke:none;animation:pulseDot 1.8s ease-in-out infinite}
+.ci-scan{stroke:var(--purple);animation:iconScan 2.4s ease-in-out infinite}
+@keyframes iconScan{0%,100%{opacity:.15;transform:translateY(-7px)}50%{opacity:1;transform:translateY(7px)}}
+@keyframes pulseDot{0%,100%{opacity:.5;r:2.4}50%{opacity:1;r:3.4}}
+
+.ci-cap{stroke:var(--blue);animation:capFloat 3s ease-in-out infinite}
+.ci-cap-line{stroke:var(--muted)}
+.ci-cap-dot{fill:var(--lime);stroke:none;animation:capFloat 3s ease-in-out infinite}
+@keyframes capFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+.ci-glass{stroke:var(--purple);stroke-width:2}
+@keyframes orbitSmall{to{transform:rotate(360deg)}}
+.investigacion-icon-fix{}
+.card-icon .ci-ring ~ .ci-glass{animation:none}
+
+.ci-ball{fill:var(--lime);stroke:none;animation:ballBounce 1.4s ease-in-out infinite}
+.ci-ground{stroke:var(--line)}
+@keyframes ballBounce{0%,100%{transform:translateY(0) scaleX(1)}45%{transform:translateY(10px) scaleX(1.12)}60%{transform:translateY(10px) scaleX(1.12)}75%{transform:translateY(0) scaleX(1)}}

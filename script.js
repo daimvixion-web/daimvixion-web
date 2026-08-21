@@ -23,10 +23,10 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeTerms()});
 
 /* --- AI CORE: cardinal interactive nodes + radar pings + cursor sparks --- */
 const CORE_NODES = [
-  { pos:"top",    cls:"vision", label:"VISION", kicker:"VISION / CAPACIDADES", items:["Object Detection","Tracking","Pose Estimation","Classification"] },
-  { pos:"left",   cls:"data",   label:"DATA",   kicker:"DATA / CAPACIDADES",   items:["Dataset","Features","Analytics","Pipelines"] },
-  { pos:"right",  cls:"model",  label:"MODEL",  kicker:"MODEL / CAPACIDADES",  items:["Deep Learning","Computer Vision","LLMs","Generative AI"] },
-  { pos:"bottom", cls:"action", label:"ACTION", kicker:"ACTION / CAPACIDADES", items:["Automatización","Reportes","Alertas","Integración"] }
+  { pos:"top",    cls:"vision", label:"VISIÓN", kicker:"VISIÓN / CAPACIDADES", items:["Detección de objetos","Seguimiento (Tracking)","Estimación de pose","Clasificación"] },
+  { pos:"left",   cls:"data",   label:"DATA",   kicker:"DATA / CAPACIDADES",   items:["Dataset","Variables (Features)","Analítica","Pipelines"] },
+  { pos:"right",  cls:"model",  label:"MODELO", kicker:"MODELO / CAPACIDADES", items:["Deep Learning","Computer Vision","LLMs","IA Generativa"] },
+  { pos:"bottom", cls:"action", label:"ACCIÓN", kicker:"ACCIÓN / CAPACIDADES", items:["Automatización","Reportes","Alertas","Integración"] }
 ];
 
 function buildMotionStage(stage){
