@@ -1,0 +1,104 @@
+/* ============================================================
+   V9 ART-DIRECTED SYSTEM
+   Less "AI arrows", more editorial / product-design language.
+   Each internal page owns its own color system using 70/20/10.
+   ============================================================ */
+
+:root{--ink:#05070b;--paper:#f3f1ea;--violet:#9f3cff;--blue:#4c8dff;--cyan:#36e6ff;--lime:#b6ff38;--orange:#ff8a30;--red:#ff5b5b}
+body{background:var(--ink)}
+body.theme-ia{--accent:#55d6ff;--accent2:#b6ff38;--soft:#0c2630;--hot:#55d6ff}
+body.theme-courses{--accent:#a66bff;--accent2:#5eead4;--soft:#24133d;--hot:#d7a5ff}
+body.theme-research{--accent:#ff9b4a;--accent2:#ff4f9a;--soft:#351b12;--hot:#ffd166}
+body.theme-sports{--accent:#79e26b;--accent2:#ffb84d;--soft:#102c1b;--hot:#f6f26a}
+
+body.theme-ia .hero h1 span,body.theme-courses .hero h1 span,body.theme-research .hero h1 span,body.theme-sports .hero h1 span{color:var(--accent)}
+body.theme-ia .cta{background:linear-gradient(105deg,#168eb4,#57d6ff)}
+body.theme-courses .cta{background:linear-gradient(105deg,#7138c9,#a96cff)}
+body.theme-research .cta{background:linear-gradient(105deg,#b75d20,#ff9b4a)}
+body.theme-sports .cta{background:linear-gradient(105deg,#28773d,#79e26b);color:#061009}
+
+/* Replace generic AI arrows with a visual rail: line + indexed stations. */
+.pixels-flow,.pipeline,.research-flow,.flow{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:stretch;overflow:visible;padding:30px 0;margin-top:20px}
+.pipeline{grid-template-columns:repeat(5,1fr)}
+.research-flow{grid-template-columns:repeat(4,1fr)}
+.flow{grid-template-columns:repeat(5,1fr)}
+.pixels-flow:before,.pipeline:before,.research-flow:before,.flow:before{content:"";position:absolute;left:7%;right:7%;top:50%;height:1px;background:linear-gradient(90deg,transparent,var(--accent,#9f3cff55),var(--accent,#9f3cff),transparent);opacity:.45}
+.pf-arrow,.arrow,.rf-arrow,.process-line>i{display:none!important}
+.pf-step,.pstep,.rf-node,.flow .step{position:relative;z-index:2;min-width:0!important;margin:0 8px;border:1px solid #283141!important;border-radius:16px!important;background:linear-gradient(145deg,#0c1118,#070a0f)!important;padding:22px 20px!important;box-shadow:0 20px 50px #0004;transition:transform .45s ease,border-color .45s ease,box-shadow .45s ease,background .45s ease;opacity:1!important;transform:none!important}
+.pf-step:before,.pstep:before,.rf-node:before,.flow .step:before{content:attr(data-index);position:absolute;left:16px;top:-9px;padding:3px 7px;border:1px solid currentColor;border-radius:99px;background:#070a0f;font:800 8px monospace;letter-spacing:1px;color:var(--accent,#9f3cff)}
+.pf-step:hover,.pstep:hover,.rf-node:hover,.flow .step:hover{transform:translateY(-7px)!important;border-color:var(--accent)!important;box-shadow:0 26px 60px #0007,0 0 0 1px color-mix(in srgb,var(--accent) 25%,transparent)}
+.pstep b,.flow .step b,.rf-node b{color:var(--accent)!important}
+
+/* The sequence is an editorial instrument, not a flowchart. */
+.sequence-note{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:8px;padding:14px 0;border-top:1px solid #202735;color:#7f8a9d;font:700 9px monospace;letter-spacing:1.5px}
+.sequence-note strong{color:#e9edf5;font-size:10px}
+
+/* Hero becomes a controlled studio composition. */
+.hero{min-height:720px;gap:6vw;padding-top:78px}
+.hero-copy{max-width:650px}
+.hero .kicker{color:var(--accent,#788498)}
+.hero p{max-width:570px}
+.scene{border-radius:24px;border-color:#26303d;box-shadow:0 35px 90px #0008,inset 0 0 0 1px #ffffff04}
+.scene:after{content:"";position:absolute;inset:12px;border:1px solid #ffffff08;border-radius:17px;pointer-events:none}
+
+/* IA — cinematic camera window + metadata spine */
+.theme-ia .cv-scene{background:radial-gradient(circle at 50% 48%,#123d48 0,transparent 28%),linear-gradient(135deg,#071116,#03060a)}
+.theme-ia .cv-frame{inset:14% 12%;border:1px solid #55d6ff55;border-radius:10px;box-shadow:inset 0 0 80px #55d6ff08}
+.theme-ia .cv-object{border-color:#b6ff38;box-shadow:0 0 40px #b6ff3833}
+.theme-ia .cv-line{background:#55d6ff;box-shadow:0 0 25px #55d6ff}
+.theme-ia .cv-result{color:#b6ff38;letter-spacing:1px}
+.theme-ia .showcase-card{background:#070b0e;border-color:#1e343c;border-radius:18px}
+.theme-ia .case-visual{height:250px}
+.theme-ia .caption small{color:#55d6ff}
+.theme-ia .caption h3{font-size:26px}
+
+/* COURSES — route as constellation, not a progress bar */
+.theme-courses .learning-scene{background:radial-gradient(circle at 20% 80%,#41246d,transparent 28%),radial-gradient(circle at 80% 20%,#103d38,transparent 24%),#08070d}
+.theme-courses .path{height:1px;background:linear-gradient(90deg,transparent,#a66bff 15%,#5eead4 52%,#a66bff 85%,transparent);box-shadow:0 0 35px #a66bff33;transform:rotate(-8deg)}
+.theme-courses .lesson{width:58px;height:58px;border-radius:18px;transform:rotate(45deg);background:#0d0b13;border-color:#49365f}
+.theme-courses .lesson::first-line{transform:rotate(-45deg)}
+.theme-courses .lesson.on{background:#6f3ec0;border-color:#c79dff;box-shadow:0 0 45px #a66bff55}
+.theme-courses .course-label{color:#bca5d9}
+.theme-courses .metric{background:#0d0b13;border-color:#4b365f}
+.theme-courses .bar{background:#251e2d}.theme-courses .bar i{background:linear-gradient(90deg,#a66bff,#5eead4)}
+.theme-courses .card{border-color:#342841;background:linear-gradient(145deg,#100d15,#09070c);border-radius:18px}
+
+/* RESEARCH — lab / matrix aesthetic */
+.theme-research .research-scene{background:radial-gradient(circle at 72% 35%,#5a2a12,transparent 28%),radial-gradient(circle at 25% 75%,#36112b,transparent 30%),#090709}
+.theme-research .cell{border-color:#4b3028;background:#130d0b;border-radius:5px}
+.theme-research .cell.active{background:#ff9b4a22;border-color:#ff9b4a;box-shadow:0 0 25px #ff9b4a22}
+.theme-research .experiment-panel{border-color:#4a3026;background:linear-gradient(145deg,#170d09,#0b0808);border-radius:22px;box-shadow:0 30px 70px #0006}
+.theme-research .model-row .mr-fill{background:#ff9b4a}.theme-research .model-row.best .mr-fill{background:#ff4f9a}
+.theme-research .ep-best,.theme-research .ep-status{color:#ffb25f}
+.theme-research .card{border-color:#3b2822;background:linear-gradient(145deg,#120c0a,#0b0807);border-radius:18px}
+
+/* SPORTS — broadcast control room */
+.theme-sports .sports-scene{background:radial-gradient(circle at 50% 50%,#174928,transparent 36%),#061009}
+.theme-sports .sport-hud{border-color:#2a4a31;border-radius:24px;background:linear-gradient(145deg,#09130c,#050b08);box-shadow:0 35px 80px #0008}
+.theme-sports .sport-hud .field{background:linear-gradient(160deg,#123e20,#08180e)}
+.theme-sports .sport-hud .field:after{content:"";position:absolute;inset:9%;border:1px solid #d7f9c422;border-radius:2%;box-shadow:inset 0 0 0 20px #ffffff02}
+.theme-sports .sport-hud .stat-strip{background:#08120c}
+.theme-sports .sport-hud .stat-strip b{color:#79e26b}
+.theme-sports .card{border-color:#27412d;background:linear-gradient(145deg,#0b150e,#070c08);border-radius:18px}
+.theme-sports .demo-badge{border-color:#31543a;color:#9ccaa4}
+
+/* Editorial section cards */
+.showcase-grid{gap:18px}
+.showcase-card{border-radius:18px;transition:transform .45s ease,box-shadow .45s ease,border-color .45s ease}
+.showcase-card:hover{transform:translateY(-8px);box-shadow:0 30px 70px #0007}
+.case-visual{border-radius:18px 18px 0 0}
+
+/* Remove generic arrow glyphs from process strip on the home page too. */
+.process-line{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.process-line:before{content:"";position:absolute;left:6%;right:6%;top:50%;height:1px;background:linear-gradient(90deg,transparent,#8f45ff,transparent);opacity:.5}
+.process-line div{position:relative;z-index:2;border-radius:16px!important;background:#080b11!important}
+
+/* WhatsApp contact: calm, premium, not a floating green ad. */
+.wa{border:1px solid #2d8e5d;background:#0a1a12;color:#baf6d0;padding:12px 16px;border-radius:14px;box-shadow:0 16px 45px #0008;transition:transform .25s,border-color .25s,background .25s}
+.wa:hover{transform:translateY(-3px);border-color:#41b876;background:#0e2418}
+.terms-box{border-radius:22px;background:linear-gradient(145deg,#10151c,#080b10);border-color:#33404f;box-shadow:0 35px 100px #000b}
+.terms-box h3{font:700 30px Space Grotesk;margin:12px 0}
+.terms-actions .cta{background:linear-gradient(105deg,#9f3cff,#4c8dff)}
+
+@media(max-width:900px){.pixels-flow,.pipeline,.research-flow,.flow,.process-line{grid-template-columns:1fr 1fr}.pixels-flow:before,.pipeline:before,.research-flow:before,.flow:before,.process-line:before{display:none}}
+@media(max-width:700px){.pixels-flow,.pipeline,.research-flow,.flow,.process-line{grid-template-columns:1fr}.pf-step,.pstep,.rf-node,.flow .step{margin:0}.sequence-note{display:block}.sequence-note strong{display:block;margin-bottom:6px}}
