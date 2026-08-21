@@ -1,2 +1,9 @@
-document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
-function sendForm(e){e.preventDefault();const f=e.target,n=document.getElementById('form-note');const subject=encodeURIComponent('Consulta DAiMViXiOn — '+f.name.value);const body=encodeURIComponent(`Nombre: ${f.name.value}\nCorreo: ${f.email.value}\nEmpresa: ${f.company.value}\n\nMensaje:\n${f.message.value}`);window.location.href=`mailto:servicios@daimvixionai.com?subject=${subject}&body=${body}`;n.textContent='Se abrirá tu correo para completar el envío.';n.className='form-note ok';return false;}
+
+const WA="51991429347";
+function wa(message){
+  const url="https://wa.me/"+WA+"?text="+encodeURIComponent(message);
+  window.open(url,"_blank","noopener");
+}
+document.querySelectorAll("[data-wa]").forEach(b=>{
+  b.addEventListener("click",()=>wa(b.dataset.wa));
+});
