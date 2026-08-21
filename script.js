@@ -235,3 +235,53 @@ document.querySelectorAll(".audience-tabs").forEach(tabGroup => {
     });
   });
 });
+
+/* --- DAiMViXiOn unique scene runtime --- */
+document.querySelectorAll(".scene").forEach(scene=>{
+  const kind=scene.dataset.scene;
+  const label=scene.dataset.label||"SISTEMA EN TIEMPO REAL";
+  scene.insertAdjacentHTML("afterbegin",`<div class="scene-label">${label}</div><div class="scene-status">EN VIVO</div>`);
+  if(kind==="mesh"){
+    scene.insertAdjacentHTML("beforeend",`
+      <div class="mesh-grid"></div><div class="mesh-core"></div>
+      <span class="mesh-node" style="left:18%;top:28%"></span><span class="mesh-node" style="left:78%;top:26%;animation-delay:.7s"></span>
+      <span class="mesh-node" style="left:25%;top:72%;animation-delay:1.4s"></span><span class="mesh-node" style="left:76%;top:73%;animation-delay:2s"></span>
+      <i class="mesh-line" style="left:20%;top:30%;width:34%;transform:rotate(24deg)"></i>
+      <i class="mesh-line" style="left:55%;top:32%;width:28%;transform:rotate(-12deg)"></i>
+      <i class="mesh-line" style="left:27%;top:70%;width:31%;transform:rotate(-31deg)"></i>
+    `);
+  }
+  if(kind==="vision"){
+    scene.insertAdjacentHTML("beforeend",`<div class="vision-frame"><div class="vision-object"></div><div class="vision-scan"></div></div>`);
+  }
+  if(kind==="learning"){
+    scene.insertAdjacentHTML("beforeend",`
+      <div class="learning-track"></div>
+      <div class="learning-node active">01</div><div class="learning-node">02</div><div class="learning-node">03</div><div class="learning-node">04</div><div class="learning-node">05</div>
+      <div class="learning-card c1"><strong>COMPUTER VISION</strong><span>práctica · proyecto</span></div>
+      <div class="learning-card c2"><strong>LLMs</strong><span>aplicación · evaluación</span></div>
+    `);
+  }
+  if(kind==="research"){
+    scene.insertAdjacentHTML("beforeend",`<div class="matrix">${[42,67,54,82,38,73,61,91,49,64,77,58].map(h=>`<i style="--h:${h}%"></i>`).join("")}</div><div class="research-axis"></div><div class="research-best">MEJOR MODELO · C · 93.8%</div>`);
+  }
+  if(kind==="sports"){
+    scene.insertAdjacentHTML("beforeend",`<div class="pitch"><span class="player-dot" style="left:18%;top:58%"></span><span class="player-dot b" style="left:45%;top:32%"></span><span class="player-dot c" style="left:68%;top:63%"></span><span class="player-dot" style="left:78%;top:28%;animation-delay:1.4s"></span><span class="ball-live"></span></div>`);
+  }
+});
+
+/* unique showcase visual renderer */
+document.querySelectorAll(".case-visual").forEach(v=>{
+ const k=v.dataset.case;
+ const tag=v.dataset.tag||"VISIÓN IA";
+ const body={};
+ if(k==="avocado") body.html=`<div class="cv-pallet"></div>${[[22,25],[48,32],[69,23],[34,58],[62,64]].map((p,i)=>`<i class="cv-fruit" style="left:${p[0]}%;top:${p[1]}%;animation-delay:${i*.35}s"></i>`).join("")}`;
+ if(k==="plant") body.html=`<div class="cv-leaf"></div><i class="cv-lesion" style="left:55%;top:34%"></i><i class="cv-lesion" style="left:66%;top:58%;animation-delay:.7s"></i><i class="cv-lesion" style="left:39%;top:67%;animation-delay:1.2s"></i>`;
+ if(k==="pose") body.html=`<div class="cv-skeleton"></div>${[[42,18],[49,30],[57,40],[39,48],[63,50],[47,67],[67,78]].map((p,i)=>`<i class="cv-joint" style="left:${p[0]}%;top:${p[1]}%;animation-delay:${i*.18}s"></i>`).join("")}`;
+ if(k==="industry") body.html=`<div class="cv-factory"></div><i class="cv-part" style="left:22%;top:43%"></i><i class="cv-part" style="left:55%;top:52%;animation-delay:1.3s"></i><i class="cv-part" style="left:70%;top:30%;animation-delay:2.2s"></i>`;
+ if(k==="cattle") body.html=`<div class="cv-cattle"></div><i class="cv-cow" style="left:20%;top:48%"></i><i class="cv-cow" style="left:54%;top:34%;transform:scale(.8);animation-delay:1.2s"></i>`;
+ if(k==="text") body.html=`<div class="cv-doc"></div><div class="cv-brain"></div><div class="cv-envelope"></div>`;
+ if(k==="llm") body.html=`<div class="cv-brain"></div><div class="cv-envelope"></div><div class="cv-envelope" style="right:35%;top:24%;transform:rotate(6deg) scale(.75);animation:float 4s infinite"></div>`;
+ if(k==="security") body.html=`<div class="cv-factory" style="inset:14% 10%"></div><span class="cv-joint" style="left:31%;top:30%"></span><span class="cv-joint" style="left:55%;top:54%;background:#ff5f7a"></span><span class="cv-joint" style="left:72%;top:33%;background:#ff5f7a"></span>`;
+ v.innerHTML=`<span class="cv-tag">${tag}</span>${body.html||""}`;
+});
