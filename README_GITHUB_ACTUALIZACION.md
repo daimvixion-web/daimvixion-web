@@ -1,22 +1,23 @@
-# DAiMViXiOn — actualización de arquitectura
+# DAiMViXiOn — arquitectura multi-página por universos
 
-Esta versión reorganiza el sitio en: Soluciones, Tecnología, Resultados, Lab, Sports y Academy. Mantiene el flujo de confirmación antes de abrir WhatsApp y utiliza los recursos visuales existentes.
+La web está organizada como un ecosistema navegable, no como una única página larga.
 
-## Publicación
-1. Descomprime esta carpeta.
-2. Sustituye el contenido del repositorio GitHub actual por estos archivos.
-3. Haz commit en `main`.
-4. Cloudflare Pages debería desplegar automáticamente.
-5. Verifica `https://daimvixionai.com`.
+## Universos visuales
 
-## WhatsApp
-El número configurado es el que ya estaba funcionando en el proyecto. No se modifica.
+- **Inicio:** identidad neutral/futurista. Presenta el ecosistema.
+- **Soluciones:** naranja/ámbar — problemas empresariales, desarrollo a medida y automatización.
+- **Tecnología:** azul eléctrico — AI Engineering, modelos, reentrenamiento, datasets y stack.
+- **Resultados:** ámbar/dorado — casos, demos y resultados verificables.
+- **Lab:** turquesa/cian — investigación aplicada, hipótesis, experimentos y métricas.
+- **Sports:** verde naturaleza — transmisión, tracking, analítica y highlights como unidad independiente.
+- **Academy:** violeta/magenta + dorado — formación y aprendizaje aplicado.
 
-## YouTube
-No se inventaron enlaces. En `resultados.html`, cada caso está preparado para incorporar el enlace oficial de YouTube cuando se proporcionen las URLs reales.
+Cada universo aplica una estrategia aproximada **70/20/10**: campo oscuro dominante, paneles/tonos secundarios y acento de identidad.
 
-## Antes de publicar
-- Revisar textos y cifras reales.
-- Proporcionar URLs de YouTube para conectar los botones de demostración.
-- Verificar el sitio en móvil.
-- Probar todos los botones de WhatsApp.
+## Navegación
+
+Todas las áreas principales tienen página propia y navegación global. El menú marca visualmente la sección activa.
+
+## Contacto
+
+Se conserva el flujo de confirmación antes de abrir WhatsApp y el correo `proyectos@daimvixionai.com`.
