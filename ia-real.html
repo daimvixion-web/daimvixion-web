@@ -1,4 +1,5 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IA Real — DAiMViXiOn</title><link rel="stylesheet" href="styles.css"><meta name="description" content="Computer Vision, Machine Learning, Deep Learning, LLMs y soluciones de IA aplicadas a agricultura, industria, seguridad, texto y más."><meta name="robots" content="index,follow"><link rel="canonical" href="https://daimvixionai.com/ia-real.html"><meta property="og:type" content="website"><meta property="og:site_name" content="DAiMViXiOn"><meta property="og:title" content="IA Real — Proyectos de inteligencia artificial | DAiMViXiOn"><meta property="og:description" content="Computer Vision, Machine Learning, Deep Learning, LLMs y soluciones de IA aplicadas a agricultura, industria, seguridad, texto y más."><meta property="og:url" content="https://daimvixionai.com/ia-real.html"><meta property="og:image" content="https://daimvixionai.com/og-image.svg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="IA Real — Proyectos de inteligencia artificial | DAiMViXiOn"><meta name="twitter:description" content="Computer Vision, Machine Learning, Deep Learning, LLMs y soluciones de IA aplicadas a agricultura, industria, seguridad, texto y más."><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta name="description" content="Desarrollo de soluciones reales con Computer Vision, Machine Learning, Deep Learning, LLMs e IA generativa."><meta property="og:title" content="IA Real — DAiMViXiOn"><meta property="og:description" content="Desarrollo de soluciones reales con Computer Vision, Machine Learning, Deep Learning, LLMs e IA generativa."><meta property="og:type" content="website"><meta name="theme-color" content="#04050a"><link rel="icon" href="favicon.svg"></head><body class="theme-solutions">
+<script>function handleImgError(img){img.onerror=null;var box=img.closest('.case-visual');if(!box)return;var src=img.getAttribute('src');img.remove();var note=document.createElement('div');note.className='img-missing-note';note.innerHTML='Falta subir la imagen: <code>'+src+'</code>';box.appendChild(note);}</script>
 <script>function handleImgError(img){img.onerror=null;var shot=img.closest('.shot');if(!shot)return;shot.innerHTML='<span class="live-tag"><span class="dot-live"></span>SISTEMA REAL</span><div class="abstract-viz"><div class="viz-grid"></div><div class="viz-scan"></div><div class="viz-core"></div></div><div class="img-missing-note">Falta subir la imagen: <code>'+img.getAttribute('src')+'</code></div>';}</script>
 <header class="nav">
   <a href="index.html"><div class="logo">DAiMViXi<span>On</span><i>.</i><small class="tag">IA · VISIÓN · DATA · FUTURO</small></div></a>
@@ -23,48 +24,59 @@
 <div class="showcase-grid">
 
 <div class="showcase-card">
-  <div class="case-visual" data-case="avocado" data-tag="AGRICULTURA · VISIÓN"></div><div class="caption"><small>AGRICULTURA</small><h3>Conteo de paltas</h3><p>Visión artificial para identificar y contabilizar frutos en campo, en tiempo real.</p></div>
+  <div class="case-visual"><img src="assets/conteo-paltas.jpg" alt="Conteo automático de paltas con visión por computador" onerror="handleImgError(this)"><span class="case-live"><i></i>SISTEMA REAL</span></div><div class="caption"><small>AGRICULTURA</small><h3>Conteo de paltas</h3><p>Visión artificial para identificar y contabilizar frutos en campo, en tiempo real.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="case-visual" data-case="plant" data-tag="PLANTAS · DIAGNÓSTICO"></div><div class="caption"><small>PLANTAS</small><h3>Enfermedades en cultivos</h3><p>Clasificación y detección de enfermedades foliares a partir de imágenes.</p></div>
+  <div class="case-visual"><img src="assets/diagnostico-cultivo.jpg" alt="Diagnóstico de enfermedades en cultivos" onerror="handleImgError(this)"><span class="case-live"><i></i>SISTEMA REAL</span></div><div class="caption"><small>PLANTAS</small><h3>Enfermedades en cultivos</h3><p>Clasificación y detección de enfermedades foliares a partir de imágenes.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="case-visual" data-case="pose" data-tag="PERSONAS · POSE"></div><div class="caption"><small>PERSONAS</small><h3>Detección de pose</h3><p>Análisis de postura y movimiento, incluyendo escenarios de seguridad ocupacional.</p></div>
+  <div class="case-visual"><img src="assets/pose-deteccion.jpg" alt="Detección de pose y análisis de movimiento" onerror="handleImgError(this)"><span class="case-live"><i></i>SISTEMA REAL</span></div><div class="caption"><small>PERSONAS</small><h3>Detección de pose</h3><p>Análisis de postura y movimiento, incluyendo escenarios de seguridad ocupacional.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="case-visual" data-case="security" data-tag="SEGURIDAD · VISIÓN">
+  <div class="case-visual security">
+    <span class="case-dev">EN DESARROLLO</span>
+    <div class="sweep"></div>
+    <div class="alert-blip" style="left:38%;top:44%"></div>
+    <div class="det-readout" style="color:var(--pink)">MONITOREO · ACTIVO<br>INCIDENTE · EN EVALUACIÓN</div>
   </div>
   <div class="caption"><small>SEGURIDAD</small><h3>Detección de incumplimientos</h3><p>Análisis visual para identificar comportamientos o condiciones de seguridad. Línea de trabajo en desarrollo.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="case-visual" data-case="health" data-tag="SALUD · IMAGEN">
+  <div class="case-visual health">
+    <span class="case-dev">EN DESARROLLO</span>
+    <svg viewBox="0 0 300 220" preserveAspectRatio="none"><path d="M0,140 L60,140 L80,80 L100,180 L120,40 L140,140 L300,140"/></svg>
+    <div class="readout">SEÑAL · ESTABLE<br>ANÁLISIS · EN CURSO</div>
   </div>
   <div class="caption"><small>SALUD</small><h3>Análisis de imágenes</h3><p>Investigación y prototipos para apoyo en detección de enfermedades. Línea de trabajo en desarrollo.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="case-visual" data-case="industry" data-tag="INDUSTRIA · CALIDAD">
-  </div>
-  <div class="caption"><small>INDUSTRIA</small><h3>Conteo y desperfectos</h3><p>Detección de productos, defectos y condiciones anómalas. Línea de trabajo en desarrollo.</p></div>
+  <div class="case-visual"><img src="assets/industria-piezas.jpg" alt="Inspección de calidad industrial en línea" onerror="handleImgError(this)"><span class="case-live"><i></i>SISTEMA REAL</span></div>
+  <div class="caption"><small>INDUSTRIA</small><h3>Conteo y desperfectos</h3><p>Detección de productos, defectos y condiciones anómalas.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="case-visual" data-case="cattle" data-tag="GANADERÍA · VISIÓN">
-  </div>
-  <div class="caption"><small>GANADERÍA</small><h3>Ganado inteligente</h3><p>Conteo, detección de enfermedades y estimación de peso. Línea de trabajo en desarrollo.</p></div>
+  <div class="case-visual"><img src="assets/ganado.jpg" alt="Monitoreo inteligente de ganado" onerror="handleImgError(this)"><span class="case-live"><i></i>SISTEMA REAL</span></div>
+  <div class="caption"><small>GANADERÍA</small><h3>Ganado inteligente</h3><p>Conteo, detección de enfermedades y estimación de peso.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="case-visual" data-case="text" data-tag="TEXTO · NLP"></div>
+  <div class="case-visual text-nlp">
+    <span class="case-dev">EN DESARROLLO</span>
+    <div class="tline" style="width:92%"><i></i></div>
+    <div class="tline hl" style="width:64%"><i style="animation-delay:.5s"></i></div>
+    <div class="tline" style="width:78%"><i style="animation-delay:1s"></i></div>
+    <div class="tag-out">ENTIDAD EXTRAÍDA: "FACTURA · 12/08"</div>
+  </div>
   <div class="caption"><small>TEXTO</small><h3>Procesamiento inteligente</h3><p>Extracción, clasificación, análisis y automatización de información textual.</p></div>
 </div>
 
 <div class="showcase-card">
-  <div class="case-visual" data-case="llm" data-tag="IA GENERATIVA · LLM"></div>
+  <div class="case-visual"><img src="assets/llm-automatizacion.jpg" alt="LLMs y automatización de procesos" onerror="handleImgError(this)"><span class="case-live"><i></i>SISTEMA REAL</span></div>
   <div class="caption"><small>IA GENERATIVA</small><h3>LLMs y automatización</h3><p>Aplicaciones con modelos de lenguaje y sistemas generativos.</p></div>
 </div>
 
@@ -72,11 +84,11 @@
 <section class="section" style="padding-bottom:50px"><div class="kicker">METODOLOGÍA</div><h2>Del problema al resultado.</h2>
 <div class="process-track">
   <div class="track-grid" style="--n:5">
-    <div class="track-cell"><b>01</b><strong>Problema</strong><span>Qué necesitamos resolver</span></div>
-    <div class="track-cell bottom"><b>02</b><strong>Datos</strong><span>Qué podemos observar</span></div>
-    <div class="track-cell"><b>03</b><strong>Modelo</strong><span>Qué puede aprender</span></div>
-    <div class="track-cell bottom"><b>04</b><strong>Validación</strong><span>Qué tan bien funciona</span></div>
-    <div class="track-cell"><b>05</b><strong>Solución</strong><span>Aplicación real</span></div>
+    <div class="track-cell" style="grid-column:1"><b>01</b><strong>Problema</strong><span>Qué necesitamos resolver</span></div>
+    <div class="track-cell bottom" style="grid-column:2"><b>02</b><strong>Datos</strong><span>Qué podemos observar</span></div>
+    <div class="track-cell" style="grid-column:3"><b>03</b><strong>Modelo</strong><span>Qué puede aprender</span></div>
+    <div class="track-cell bottom" style="grid-column:4"><b>04</b><strong>Validación</strong><span>Qué tan bien funciona</span></div>
+    <div class="track-cell" style="grid-column:5"><b>05</b><strong>Solución</strong><span>Aplicación real</span></div>
     <div class="track-line"><i></i></div>
     <div class="track-dot" style="grid-column:1"></div>
     <div class="track-dot" style="grid-column:2"></div>

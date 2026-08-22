@@ -236,7 +236,7 @@ h1,h2,h3,.logo,.brand{font-family:var(--font-display)}
 
 @media(max-width:850px){
   .track-grid{grid-template-columns:1fr!important;grid-template-rows:none;row-gap:0}
-  .track-cell,.track-cell.bottom{grid-row:auto;grid-column:1;text-align:left;padding:0 0 30px 28px;position:relative;transform:none!important}
+  .track-cell,.track-cell.bottom{grid-row:auto;grid-column:1!important;text-align:left;padding:0 0 30px 28px;position:relative;transform:none!important}
   .track-cell:last-child{padding-bottom:4px}
   .track-line{display:none}
   .track-dot{display:none}
