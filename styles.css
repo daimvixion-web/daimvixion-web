@@ -331,6 +331,10 @@ h1,h2,h3,.logo,.brand{font-family:var(--font-display)}
 .result-thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .result-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#000a;border:1.5px solid #fff8;display:flex;align-items:center;justify-content:center;color:#fff;backdrop-filter:blur(4px)}
 .result-play svg{width:14px;height:14px;margin-left:2px}
+.result-thumb[data-youtube]:not([data-youtube=""]) .result-play{background:#ff0000dd;border-color:#fff;transition:transform .2s ease}
+.result-thumb[data-youtube]:not([data-youtube=""]):hover .result-play{transform:translate(-50%,-50%) scale(1.15)}
+.result-thumb[data-youtube]:not([data-youtube=""]):hover img{transform:scale(1.05)}
+.result-thumb img{transition:transform .3s ease}
 .result-tag{position:absolute;left:10px;top:10px;font:800 8.5px monospace;letter-spacing:1.2px;color:var(--rc,#b6ff38)}
 .result-body{padding:16px}
 .result-body h3{font:700 14.5px 'Space Grotesk',Arial;margin:0 0 6px;letter-spacing:-.2px}
