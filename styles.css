@@ -1,5 +1,11 @@
 
 :root{--bg:#04050a;--panel:#090c13;--line:#222a38;--text:#f6f8ff;--muted:#9ca8bb;--purple:#9f3cff;--blue:#4c8dff;--cyan:#36e6ff;--lime:#b6ff38;--pink:#ff3d9a}
+body.theme-cursos{--blue:#22d3ee;--cyan:#22d3ee}
+body.theme-cursos{background:radial-gradient(circle at 70% 0,#0d2c40 0,transparent 28%),var(--bg)}
+body.theme-investigacion{--blue:#ff5f7a;--purple:#c23cff}
+body.theme-investigacion{background:radial-gradient(circle at 70% 0,#2a0d18 0,transparent 28%),var(--bg)}
+body.theme-sports{--blue:#3ecf6e;--lime:#c8ff5c}
+body.theme-sports{background:radial-gradient(circle at 70% 0,#0d2a18 0,transparent 28%),var(--bg)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 70% 0,#18102c 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden}a{text-decoration:none;color:inherit}button{font:inherit}
 .nav{height:82px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:#04050add;border-bottom:1px solid #1a202b;backdrop-filter:blur(18px)}
 .logo{font:900 25px/1 Space Grotesk,Arial;letter-spacing:-1.5px}.logo span{color:var(--purple)}.logo i{color:var(--lime);font-style:normal}.tag{display:block;font:600 8px/1 Inter;letter-spacing:4px;color:#697587;margin-top:6px}.menu{display:flex;gap:28px}.menu a{font-size:12px;letter-spacing:1px;color:#aeb7c7}.menu a:hover{color:#fff}.cta{border:0;border-radius:11px;padding:14px 20px;color:white;background:linear-gradient(105deg,var(--purple),var(--blue));font-weight:800;font-size:11px;cursor:pointer;box-shadow:0 12px 35px #6e35ff22}
@@ -67,7 +73,8 @@ h1,h2,h3,.logo,.brand{font-family:var(--font-display)}
 .contact-section{padding:70px 7vw 110px}.contact-box{max-width:1250px;margin:auto;padding:45px;border:1px solid #2a3341;background:radial-gradient(circle at 80% 0,#29124e,transparent 34%),#080b11;display:flex;justify-content:space-between;align-items:center;gap:40px}.contact-box h2{font-size:56px;letter-spacing:-3px;margin:13px 0}.contact-box p{max-width:620px;color:#8995a8;line-height:1.6}
 .resource-rail,.we-build,.banner{display:none}
 @media(max-width:1000px){.solution-grid{grid-template-columns:repeat(2,1fr)}.case-grid{grid-template-columns:repeat(2,1fr)}.process-inner{grid-template-columns:1fr}.process-line{grid-template-columns:1fr}.process-line i{display:none}}
-@media(max-width:700px){.hero{grid-template-columns:1fr;padding:70px 5vw}.hero h1{font-size:64px}.solution-grid,.case-grid{grid-template-columns:1fr}.solution-card{min-height:360px}.solution-art{height:190px}.process-section,.contact-section,.section{padding-left:5vw;padding-right:5vw}.contact-box{display:block;padding:30px}.contact-box h2{font-size:45px}.menu{display:none}}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding:70px 5vw}.hero h1{font-size:clamp(38px,11vw,58px);overflow-wrap:break-word}.solution-grid,.case-grid{grid-template-columns:1fr}.solution-card{min-height:360px}.solution-art{height:190px}.process-section,.contact-section,.section{padding-left:5vw;padding-right:5vw}.contact-box{display:block;padding:30px}.contact-box h2{font-size:45px}.menu{display:none}}
+.hero h1{overflow-wrap:break-word;word-break:break-word}
 
 /* ============================================================
    COMPONENTES COMPARTIDOS: IA REAL / CURSOS / INVESTIGACIÓN / DEPORTES
