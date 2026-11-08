@@ -1,10 +1,19 @@
-# DAiMViXiOn V8 — Sistema visual 70/20/10
+# TRIP Travel — Perú primero, el mundo después
 
-La portada `index.html` se conserva. Las cuatro páginas internas fueron replanteadas con una estructura propia y una estrategia cromática 70/20/10 por caso.
+Web estática para GitHub Pages. Subir **el contenido** de este ZIP a la raíz del repositorio `trip-travel`.
 
-- **IA Real:** 70% navy/negro · 20% azul eléctrico · 10% lima. Estructura: cámara → bounding box → detección → tracking → clasificación.
-- **Cursos:** 70% berenjena oscuro · 20% violeta · 10% cyan. Estructura: ruta visual → módulos → progreso → proyecto.
-- **Investigación:** 70% carbón cálido · 20% marrón/ámbar · 10% magenta. Estructura: matriz experimental → modelos → métricas → resultado.
-- **Deportes:** 70% verde profundo · 20% verde de campo · 10% naranja. Estructura: campo táctico → jugadores → tracking → datos → highlights.
+## Incluye
+- Logo oficial proporcionado por la empresa, con fondo transparente.
+- Portada con video local de paisajes de Perú y destinos internacionales.
+- Dos GIF animados locales, tarjetas de ocho destinos peruanos y ocho referencias internacionales.
+- Misión y visión redactadas como propuestas de marca, sujetas a aprobación.
+- Sección de hoteles con categorías y criterios para evaluar alojamientos.
+- WhatsApp +51 954 021 718.
 
-Las animaciones son objetos funcionales de cada narrativa; los textos están separados de las zonas de movimiento para evitar solapes.
+## Alcance y precisión
+Los paisajes son imágenes ilustrativas; no representan inventario ni disponibilidad de reservas. Los videos son montajes de imágenes, no filmaciones en vivo. El buscador enlaza a plataformas externas y no confirma reservas en TRIP Travel. No se afirman alianzas comerciales, certificaciones, horarios ni precios no verificados.
+
+## Archivos principales
+`index.html`, `destinos.html`, `hoteles.html`, `nosotros.html`, `trip-global-integrated.css`, `trip-interactive-v7.js`, `assets/images/`, `assets/video/`.
+
+Para evitar versiones antiguas en caché, las páginas incluyen `?v=12` en CSS y JavaScript.
